@@ -1,179 +1,107 @@
-import * as React from "react"
+import * as React from "react";
+import "../styles/global.css";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "TypeScript Documentation",
-  url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        🎉🎉🎉
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+    <main className="">
+      <section className="bg-background sm:bg-midnight h-fit px-8 py-12 sm:px-32">
+        <div className="flex flex-row justify-between">
+          <span className="text-text">logotipo</span>
+          <span className="text-text">Get Early Access</span>
+        </div>
+        <div className="py-24 sm:py-48">
+          <div className="text-center sm:text-left">
+            <h1 className="text-text text-6xl font-bold capitalize">A New Way To Start Business</h1>
+            <h3 className="text-text text-lg mt-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium incidunt praesentium. Officia animi commodi alias beatae nisi dolorum consectetur! Quas quae quidem harum dolorem facilis necessitatibus fugit, molestiae laudantium.</h3>
+            <button className="bg-secondary mt-8 text-black py-4 px-8 font-bold rounded-full">Get Started</button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white h-fit px-8 py-20 sm:px-32">
+        <div className="text-center">
+          <h3 className="text-black font-bold text-4xl sm:text-5xl">Uma assinatura digital para diversos serviços</h3>
+        </div>
+        <div className="py-8 sm:py-16 sm:columns-3">
+          <div className="text-center">
+            <h5 className="text-2xl">Anti-spam</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div className="text-center">
+            <h5 className="text-2xl">Anti-spam</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div className="text-center">
+            <h5 className="text-2xl">Anti-spam</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white h-fit px-8">
+        <div className="text-center">
+          <h3 className="text-black font-bold text-4xl">Atendimento Presencial</h3>
+          <p className="text-black mt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla impedit aliquid mollitia, ea dignissimos a iure libero quisquam blanditiis incidunt eius ratione praesentium tenetur voluptatem dolor cupiditate assumenda porro eveniet.</p>
+          <button className="bg-background mt-8 text-text py-4 px-8 font-bold rounded-full">Learn More</button>
+        </div>
+      </section>
+      <section className="bg-white h-fit px-8 py-20">
+        <div className="text-center">
+          <h3 className="text-black font-bold text-4xl">Atendimento a distância</h3>
+          <p className="text-black mt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla impedit aliquid mollitia, ea dignissimos a iure libero quisquam blanditiis incidunt eius ratione praesentium tenetur voluptatem dolor cupiditate assumenda porro eveniet.</p>
+          <button className="bg-background mt-8 text-text py-4 px-8 font-bold rounded-full">Learn More</button>
+        </div>
+      </section>
+      <section className="bg-white h-fit sm:px-8 sm:px-32">
+        <div className="text-center">
+          <h3 className="text-black font-bold text-4xl sm:text-5xl">Check our pricing</h3>
+        </div>
+        <div className="sm:columns-2 sm:py-16">
+          <div className="sm:px-24 text-center py-10">
+            <p className="uppercase text-2xl">Pessoa Física</p>
+            <div className="pb-6 pt-10 font-medium">R$<span className="text-5xl font-bold">140</span></div>
+            <p>beneficio 1</p>
+            <p>beneficio 2</p>
+            <p>beneficio 3</p>
+            <p>beneficio 4</p>
+            <button className="bg-text border-black mt-12 text-black border-2 py-4 px-8 font-bold rounded-full">Learn More</button>
+          </div>
+          <div className="sm:px-24 text-center bg-background py-10 sm:rounded-md">
+            <p className="uppercase text-2xl text-text">Pessoa Jurídica</p>
+            <div className="pb-6 pt-10 font-medium text-text">R$<span className="text-5xl font-bold text-text">180</span></div>
+            <p className="text-text">beneficio 1</p>
+            <p className="text-text">beneficio 2</p>
+            <p className="text-text">beneficio 3</p>
+            <p className="text-text">beneficio 4</p>
+            <button className="bg-secondary mt-12 text-black py-4 px-8 font-bold rounded-full">Learn More</button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-accent h-fit px-8 py-20">
+        <div className="text-center text-text">
+          areas de atendiento (maps)
+        </div>
+      </section>
+      <section className="bg-background h-fit px-8 py-24">
+        <div className="text-text sm:columns-2">
+          <div className="h-72">
+            <h3 className="text-4xl font-bold mb-8">Contact Us</h3>
+            <p className="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi quod sunt alias suscipit saepe aspernatur excepturi nesciunt unde, reiciendis quam illo explicabo dignissimos soluta incidunt obcaecati voluptatum ipsam modi.</p>
+            <p className="mb-1">email: tiagodurante@outlook.com.br</p>
+            <p className="mb-1">phone: 44998922501</p>
+            <p className="mb-1">endereco: rua 12 de dezembro, 242, centro</p>
+          </div>
+          <div className="h-72">
+            form de atendimento
+          </div>
+        </div>
+      </section>
+      <section className="bg-background h-fit px-8 py-12 sm:px-32">
+        <div className="flex flex-row justify-between">
+          <span className="text-text">copyright @ 2022</span>
+          <span className="text-text">facebook insta</span>
+        </div>
+      </section>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
