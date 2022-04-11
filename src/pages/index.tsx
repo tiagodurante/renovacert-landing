@@ -22,22 +22,18 @@ export const query = graphql`
 `
 
 function filterImage (data, name:string) {
-  const teste = data.allFile.nodes.find(item => item.name === name).childImageSharp
-  console.log(teste)
   return data.allFile.nodes.find(item => item.name === name).childImageSharp.fluid
 }
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-
   return (
     <main className="">
       <AppSection bgColor="background" first>
-        <div className="flex flex-row justify-between">
-          <span className="text-text">logotipo</span>
-          <span className="text-text">Get Early Access</span>
+        <div className="flex flex-row justify-center sm:justify-between">
+          <Image fluid={filterImage(data, 'logo_dif')} className="w-36"/>
+          {/* <span className="text-text sm:visible">Agendar agora</span> */}
         </div>
-        <div className="py-24 md:py-36">
+        <div className="py-20 md:py-36">
           <div className="text-center sm:text-left">
             <h1 className="text-text text-4xl sm:text-5xl lg:text-6xl font-bold capitalize">Certificado digital do jeito que você precisa</h1>
             <h3 className="text-text text-md md:text-xl mt-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium incidunt praesentium. Officia animi commodi alias beatae nisi dolorum consectetur! Quas quae quidem harum dolorem facilis necessitatibus fugit, molestiae laudantium.</h3>

@@ -12,6 +12,11 @@ const config: GatsbyConfig = {
       "path": "./src/images/"
     },
     __key: "images"
+  }, {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      icon: 'src/images/simbolo.svg',
+    }
   }]
 };
 
