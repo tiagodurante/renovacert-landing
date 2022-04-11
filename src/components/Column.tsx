@@ -3,8 +3,6 @@ import React, { FC } from "react";
 interface ColumnProps {
   children: any;
   quantity: string;
-  // first?: boolean;
-  // bgColor: string;
 }
 
 const Column: FC<ColumnProps> = (props) => {
