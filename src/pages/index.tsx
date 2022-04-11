@@ -68,7 +68,7 @@ const IndexPage = () => {
             <p>E-mail e telefone para contato</p>
             <button className="bg-text border-black mt-12 text-black border-2 py-4 px-8 font-bold rounded-full">Learn More</button>
           </AppPrice>
-          <AppPrice bgColor="background" txColor="text" title="Pessoa Jurídica em Geral" price={180} customClass="rounded-md">
+          <AppPrice bgColor="background" txColor="text" title="Pessoa Jurídica" price={180} customClass="rounded-md">
             <p className="text-text">e-CNPJ A1 (1 ano)</p>
             <p className="text-text">e-CNPJ A3 Token (1 a 3 anos)</p>
             <p className="text-text">e-CNPJ A3 Cartão (1 a 3 anos)</p>
