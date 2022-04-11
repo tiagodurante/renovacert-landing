@@ -2,6 +2,7 @@ import * as React from "react";
 import AppSection from '../components/Section'
 import AppPrice from '../components/Price'
 import "../styles/global.css";
+import AppColumn from "../components/Column";
 
 const IndexPage = () => {
   return (
@@ -23,7 +24,7 @@ const IndexPage = () => {
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Uma assinatura digital para diversos serviços</h3>
         </div>
-        <div className={`columns-3 md:py-16`}>
+        <AppColumn quantity="3">
           <div className="text-center py-10">
             <h5 className="text-2xl">Anti-spam</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -36,7 +37,7 @@ const IndexPage = () => {
             <h5 className="text-2xl">Anti-spam</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-        </div>
+        </AppColumn>
       </AppSection>
       <AppSection bgColor="white">
         <div className="text-center">
@@ -56,7 +57,7 @@ const IndexPage = () => {
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Check our pricing</h3>
         </div>
-        <div className={`columns-2 md:py-16`}>
+        <AppColumn quantity="2">
           <AppPrice bgColor="white" txColor="background" title="Pessoa Física" price={140}>
             <p>beneficio 1</p>
             <p>beneficio 2</p>
@@ -71,7 +72,7 @@ const IndexPage = () => {
             <p className="text-text">beneficio 4</p>
             <button className="bg-secondary mt-12 text-black py-4 px-8 font-bold rounded-full">Learn More</button>
           </AppPrice>
-        </div>
+        </AppColumn>
       </AppSection>
       <AppSection bgColor="background">
         <div className="text-center text-text">
@@ -79,7 +80,7 @@ const IndexPage = () => {
         </div>
       </AppSection>
       <AppSection bgColor="background">
-        <div className={`columns-2 md:py-16`}>
+        <AppColumn quantity="2">
           <div className="h-fit text-text">
             <h3 className="text-4xl font-bold mb-8">Contact Us</h3>
             <p className="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi quod sunt alias suscipit saepe aspernatur excepturi nesciunt unde, reiciendis quam illo explicabo dignissimos soluta incidunt obcaecati voluptatum ipsam modi.</p>
@@ -94,7 +95,7 @@ const IndexPage = () => {
             <p className="mb-1">phone: 44998922501</p>
             <p className="mb-1">endereco: rua 12 de dezembro, 242, centro</p>
           </div>
-        </div>
+        </AppColumn>
       </AppSection>
       <AppSection bgColor="background">
         <div className="flex flex-row justify-between">
