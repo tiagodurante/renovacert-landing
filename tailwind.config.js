@@ -11,7 +11,11 @@ module.exports = {
       text: '#FFFFFF',
       background: '#0F0F0F'
     },
-    extend: {},
+    extend: {
+      padding: {
+        '128': '40rem'
+      }
+    },
   },
   plugins: [],
 }
