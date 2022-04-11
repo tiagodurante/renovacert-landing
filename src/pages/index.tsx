@@ -14,7 +14,7 @@ const IndexPage = () => {
         </div>
         <div className="py-24 md:py-36">
           <div className="text-center sm:text-left">
-            <h1 className="text-text text-4xl sm:text-5xl lg:text-6xl font-bold capitalize">A New Way To Start Business</h1>
+            <h1 className="text-text text-4xl sm:text-5xl lg:text-6xl font-bold capitalize">Certificado digital do jeito que você precisa</h1>
             <h3 className="text-text text-md md:text-xl mt-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium incidunt praesentium. Officia animi commodi alias beatae nisi dolorum consectetur! Quas quae quidem harum dolorem facilis necessitatibus fugit, molestiae laudantium.</h3>
             <button className="bg-secondary mt-8 text-black py-4 px-8 font-bold rounded-full">Get Started</button>
           </div>
@@ -53,7 +53,7 @@ const IndexPage = () => {
       <AppSection bgColor="white">
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl">Atendimento a distância</h3>
-          <p className="text-black mt-8">Oferecemos este serviço para o cliente que não tem disponibilidade para realizar o modo presencial, permitindo com que todo o atendimento seja feito por videoconferência. Com o celular em mãos, a validação do documento com foto será realizada e o certificado poderá ser emitido dentro de 24 horas.</p>
+          <p className="text-black mt-8">Oferecemos este serviço para o cliente que não tem disponibilidade para realizar o modo presencial, permitindo com que todo o atendimento seja feito por videoconferência. Com o celular em mãos, a validação do documento com foto será realizada e o certificado poderá ser emitido dentro de 24 horas. <strong>Disponível apenas para emissões de e-CPF e e-CNPJ A1 utilizando a CNH como documento com foto e, nos casos de pessoa jurídica, o contrato social deve conter assinatura eletrônica da junta comercial</strong></p>
           <button className="bg-background mt-8 text-text py-4 px-8 font-bold rounded-full">Learn More</button>
         </div>
       </AppSection>
