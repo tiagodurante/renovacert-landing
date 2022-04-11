@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 interface ColumnProps {
   children: any;
-  quantity: string;
+  quantity: number;
 }
 
 const Column: FC<ColumnProps> = (props) => {
