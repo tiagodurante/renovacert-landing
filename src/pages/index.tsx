@@ -24,7 +24,7 @@ const IndexPage = () => {
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Uma assinatura digital para diversos serviços</h3>
         </div>
-        <AppColumn quantity={3}>
+        <AppColumn quantity={2}>
           <div className="text-center py-10">
             <h5 className="text-2xl">Emissão de nota fiscal</h5>
             <p>Realize a emissão de notas fiscais para sua empresa ou produtor rural</p>
@@ -32,6 +32,10 @@ const IndexPage = () => {
           <div className="text-center py-10">
             <h5 className="text-2xl">Serviços do governo</h5>
             <p>Acesse todos os serviços disponibilizados pelo governo federal e estadual de forma ilimitada com sua assinatura digital</p>
+          </div>
+          <div className="text-center py-10">
+            <h5 className="text-2xl">Assinatura digital</h5>
+            <p>Assine documentos digitais de forma segura</p>
           </div>
           <div className="text-center py-10">
             <h5 className="text-2xl">Assinatura digital</h5>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 interface PriceProps {
   children: any;
@@ -6,9 +6,11 @@ interface PriceProps {
 }
 
 const Price: FC<PriceProps> = (props) => {
+  const [quantityValue] = useState<number>(props.quantity)
+
   return (
     <>
-      <div className={`grid sm:grid-cols-${props.quantity} gap-2 md:py-16`}>
+      <div className={`grid sm:grid-cols-${quantityValue} gap-2 md:py-16`}>
         {props.children}
       </div>
     </>
