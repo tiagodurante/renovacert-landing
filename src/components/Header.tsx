@@ -33,7 +33,7 @@ const Header: FC<HeaderProps> = (props) => {
     <>
       <div className={`bg-${props.bgColor}`} style={background}>
       <section
-        className={`backdrop-blur-xs backdrop-brightness-15 h-screen lg:h-fit px-4 py-12 sm:px-16 lg:px-32 xl:px-64 2xl:px-128`}
+        className={`backdrop-blur-xs backdrop-brightness-15 h-fit px-4 py-12 sm:px-16 lg:px-32 xl:px-64 2xl:px-128`}
       >
         {props.children}
       </section>
