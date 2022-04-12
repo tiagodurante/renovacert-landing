@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Image from 'gatsby-image'
+import AppHeader from '../components/Header'
 import AppSection from '../components/Section'
 import AppPrice from '../components/Price'
 import AppColumn from '../components/Column'
@@ -28,19 +29,19 @@ function filterImage (data, name:string) {
 const IndexPage = ({ data }) => {
   return (
     <main className="">
-      <AppSection bgColor="background" first>
+      <AppHeader bgColor="background">
         <div className="flex flex-row justify-center sm:justify-between">
           <Image fluid={filterImage(data, 'logo_dif')} className="w-36"/>
           {/* <span className="text-text sm:visible">Agendar agora</span> */}
         </div>
-        <div className="py-20 md:py-36">
+        <div className="py-16 md:py-36">
           <div className="text-center sm:text-left">
             <h1 className="text-text text-4xl sm:text-5xl lg:text-6xl font-bold capitalize">Certificado digital do jeito que você precisa</h1>
             <h3 className="text-text text-md md:text-xl mt-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium incidunt praesentium. Officia animi commodi alias beatae nisi dolorum consectetur! Quas quae quidem harum dolorem facilis necessitatibus fugit, molestiae laudantium.</h3>
             <button className="bg-secondary mt-8 text-black py-4 px-8 font-bold rounded-full">Get Started</button>
           </div>
         </div>
-      </AppSection>
+      </AppHeader>
       <AppSection bgColor="white">
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Uma assinatura digital para diversos serviços</h3>

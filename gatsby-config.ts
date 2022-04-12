@@ -8,6 +8,13 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-postcss","gatsby-plugin-image", "gatsby-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
+      "name": "backgrounds",
+      "path": "./src/backgrounds/"
+    },
+    __key: "backgrounds"
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
       "name": "images",
       "path": "./src/images/"
     },
