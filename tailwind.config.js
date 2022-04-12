@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backdropBrightness: {
-        '15': .15 
+        '25': .25 
       },
       padding: {
         '128': '40rem'
