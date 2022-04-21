@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
         <div className="text-center">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Uma assinatura digital para diversos serviços</h3>
         </div>
-        <AppColumn quantity={2}>
+        <AppColumn>
           <div className="grid justify-items-center text-center py-10">
             <Image fluid={filterImage(data, 'fatura')} className="w-24 md:w-28 mb-2"/>
             <h5 className="text-xl font-medium">Emissão de nota fiscal</h5>
@@ -88,7 +88,7 @@ const IndexPage = ({ data }) => {
         <div className="text-center mt-12">
           <h3 className="text-black font-bold text-4xl sm:text-5xl">Consulte nossos preços</h3>
         </div>
-        <AppColumn quantity={2}>
+        <AppColumn>
           <AppPrice bgColor="white" txColor="background" title="Pessoa Física" price={140}>
             <p>e-CPF A1 (1 ano)</p>
             <p>e-CPF A3 Token (1 a 3 anos)</p>
@@ -118,9 +118,9 @@ const IndexPage = ({ data }) => {
         </div>
       </AppSection>
       <AppSection bgColor="background">
-        <AppColumn quantity={2}>
+        <AppColumn>
           <div className="text-text">
-            <h3 className="text-4xl font-bold mb-8">Ficou com dúvidas? Entre em contato!</h3>
+            <h3 className="text-4xl font-bold mb-8">Ficou com dúvidas?<br/>Entre em contato!</h3>
             <p className="mb-6">Podemos exclarecer qualquer dúvida e te deixar bem informado de todo o processo, desde a escolha do certificado adequado para sua necessidade, agendamento presencial ou a distância, até a emissão do arquivo.</p>
             <p className="mb-1">E-mail: renovacert@gmail.com</p>
             <p className="mb-1">Telefone (whatsapp): (44) 99918-8711</p>
