@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
         <div className="py-16 md:py-36">
           <div className="text-center sm:text-left">
             <h1 className="text-text text-4xl sm:text-5xl lg:text-6xl font-bold capitalize">Certificado digital do jeito que você precisa</h1>
-            <h3 className="text-text text-md md:text-xl mt-8">Escolha o dia de sua preferência para validação de documentos e pronto. Seu certificado estará disponível dentro de 24 horas. Simples assim!</h3>
+            <h3 className="text-text text-md md:text-xl mt-8">Escolha o dia de sua preferência para validação de documentos e pronto. Certificado disponível dentro de 24 horas. Simples assim!</h3>
             <button className="bg-secondary mt-8 text-black py-4 px-8 font-bold rounded-full">Solicitar agora</button>
           </div>
         </div>
@@ -120,7 +120,7 @@ const IndexPage = ({ data }) => {
       <AppSection bgColor="background">
         <AppColumn>
           <div className="text-text">
-            <h3 className="text-4xl font-bold mb-8">Ficou com dúvidas?<br/>Entre em contato!</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-8">Ficou com dúvidas?<br/>Entre em contato!</h3>
             <p className="mb-6">Podemos exclarecer qualquer dúvida e te deixar bem informado de todo o processo, desde a escolha do certificado adequado para sua necessidade, agendamento presencial ou a distância, até a emissão do arquivo.</p>
             <p className="mb-1">E-mail: renovacert@gmail.com</p>
             <p className="mb-1">Telefone (whatsapp): (44) 99918-8711</p>
@@ -128,10 +128,12 @@ const IndexPage = ({ data }) => {
           </div>
           <div className="text-text mt-8 sm:mt-0">
             <h3 className="text-4xl font-bold mb-8">Atenção!</h3>
-            <p className="mb-2">Para comunicação com o cliente, atualmente utilizamos o e-mail e WhatsApp.</p>
-            <p className="mb-2">Atendimento a distância requer do cliente um dispositivo com acesso a internet e câmera frontal.</p>
-            <p className="mb-2">Atendimento presencial e a distância requer do agente de registro o acesso a internet e disponibilidade do sistema da certificadora. Instabilidades podem acontecer durante o atendimento.</p>
-            <p className="mb-2">Estamos desenvolvendo um serviço de agendamento para trazer a melhor experiência de atendimento ao usuário.</p>
+            <ul className="list-disc px-4">
+              <li className="mb-2">Para comunicação com o cliente, atualmente utilizamos o e-mail e WhatsApp.</li>
+              <li className="mb-2">Atendimento a distância requer do cliente um dispositivo com acesso a internet e câmera frontal.</li>
+              <li className="mb-2">Atendimento presencial e a distância requer do agente de registro o acesso a internet e disponibilidade do sistema da certificadora. Instabilidades podem acontecer durante o atendimento.</li>
+              <li>Estamos desenvolvendo um serviço de agendamento para trazer a melhor experiência de atendimento ao usuário.</li>
+            </ul>
           </div>
         </AppColumn>
       </AppSection>
