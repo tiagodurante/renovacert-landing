@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
           <div className="grid justify-items-center text-center py-10">
             <Image fluid={filterImage(data, 'assinatura')} className="w-24 md:w-28 mb-2"/>
             <h5 className="text-xl font-medium">Assinatura digital</h5>
-            <p>Assine documentos digitais de forma segura e rápida</p>
+            <p>Assine documentos digitais de forma rápida e segura</p>
           </div>
         </AppColumn>
       </AppSection>
@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
         <div className="grid justify-items-center text-center skew-y-12">
           <Image fluid={filterImage(data, 'presencial')} className="w-32 md:w-64 mb-4"/>
           <h3 className="text-black font-bold text-4xl">Atendimento Presencial</h3>
-          <p className="text-black mt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla impedit aliquid mollitia, ea dignissimos a iure libero quisquam blanditiis incidunt eius ratione praesentium tenetur voluptatem dolor cupiditate assumenda porro eveniet.</p>
+          <p className="text-black mt-8">Disponível para emissões de certificado A1 e A3, o atendimento presencial permite trabalhar com uma gama maior de certificados. Mediante agendamento, a validação consiste na coleta da foto e biometria do responsável, e o certificado estará disponível para emissão em um prazo de 24 horas.</p>
           <button className="bg-background mt-8 text-text py-4 px-8 font-bold rounded-full">Solicitar agora</button>
         </div>
       </AppSection>
@@ -80,7 +80,8 @@ const IndexPage = ({ data }) => {
         <div className="grid justify-items-center text-center skew-y-12">
           <Image fluid={filterImage(data, 'distancia')} className="w-32 md:w-64 mb-4"/>
           <h3 className="text-black font-bold text-4xl">Atendimento a distância</h3>
-          <p className="text-black mt-8">Oferecemos este serviço para o cliente que não tem disponibilidade para realizar o modo presencial, permitindo com que todo o atendimento seja feito por videoconferência. Com o celular, tablet ou computador (com webcam), a validação será realizada mediante agendamento, e o certificado poderá ser emitido dentro de 24 horas. <strong>Disponível apenas para emissões de e-CPF e e-CNPJ A1 utilizando a CNH como documento com foto e, nos casos de pessoa jurídica, o contrato social deve conter assinatura eletrônica da junta comercial</strong></p>
+          <p className="text-black mt-8">Serviço permite que todo o atendimento seja feito por videoconferência. Com o celular, tablet ou computador (com webcam), a validação será realizada mediante agendamento e o certificado estará disponível para emissão em um prazo de 24 horas.</p>
+          <p className="mt-2"><strong>Disponível apenas para emissões de e-CPF e e-CNPJ A1 utilizando a CNH como documento com foto e, nos casos de pessoa jurídica, o contrato social deve conter assinatura eletrônica da junta comercial.</strong></p>
           <button className="bg-background mt-8 text-text py-4 px-8 font-bold rounded-full">Solicitar agora</button>
         </div>
       </AppSection>
