@@ -32,7 +32,7 @@ const config: GatsbyConfig = {
       anonymize: false,
       respectDNT: true,
       defer: false,
-      cookieDomain: "renovacert.com",
+      cookieDomain: "renovacert.com.br",
       enableWebVitalsTracking: true,
     },
   }]
