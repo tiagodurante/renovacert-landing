@@ -24,6 +24,17 @@ const config: GatsbyConfig = {
     options: {
       icon: 'src/images/simbolo.svg',
     }
+  }, {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: "G-WHKT8YNRWN",
+      head: true,
+      anonymize: false,
+      respectDNT: true,
+      defer: false,
+      cookieDomain: "renovacert.com",
+      enableWebVitalsTracking: true,
+    },
   }]
 };
 
