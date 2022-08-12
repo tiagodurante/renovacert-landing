@@ -25,22 +25,15 @@ const config: GatsbyConfig = {
       icon: 'src/images/simbolo.svg',
     }
   }, {
-    resolve: `gatsby-plugin-google-gtag`,
+    resolve: `gatsby-plugin-google-analytics`,
     options: {
-      // You can add multiple tracking ids and a pageview event will be fired for all of them.
-      trackingIds: [
-        "G-WHKT8YNRWN", // Google Analytics / GA
-      ],
-      // This object is used for configuration specific to this plugin
-      pluginConfig: {
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        // Defaults to https://www.googletagmanager.com
-        origin: "https://renovacert.com.br",
-      },
+      trackingId: "G-WHKT8YNRWN",
+      head: true,
+      anonymize: false,
+      respectDNT: true,
+      defer: false,
+      cookieDomain: "https://renovacert.com.br",
+      enableWebVitalsTracking: true,
     },
   }]
 };
