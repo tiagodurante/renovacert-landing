@@ -25,15 +25,14 @@ const config: GatsbyConfig = {
       icon: 'src/images/simbolo.svg',
     }
   }, {
-    resolve: `gatsby-plugin-google-analytics`,
+    resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingId: "G-WHKT8YNRWN",
-      head: true,
-      anonymize: false,
-      respectDNT: true,
-      defer: false,
-      cookieDomain: "https://renovacert.com.br",
-      enableWebVitalsTracking: true,
+      trackingIds: [
+        "G-WHKT8YNRWN", // Google Analytics / GA
+      ],
+      pluginConfig: {
+        head: true,
+      },
     },
   }]
 };
