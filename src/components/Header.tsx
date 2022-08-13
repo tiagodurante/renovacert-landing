@@ -29,8 +29,6 @@ const Header: FC<HeaderProps> = (props) => {
   }
 
   const background: CSS.Properties = {
-    // backgroundImage: "url('https://tailwind.build/placeholders/pictures/office.jpg')",
-    // backgroundImage: `url(${image.file.childImageSharp.fluid.src})`,
     backgroundImage: `url(${getRandomBackground()})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover'
