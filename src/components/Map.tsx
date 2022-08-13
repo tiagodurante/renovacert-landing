@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { MapOptions } from 'google-map-react';
 
+const key = process.env.GOOGLE_API_KEY
+
 const defaultProps = {
   center: {
     lat: -23.874982,
@@ -55,7 +57,7 @@ const Price: FC<MapProps> = ({ icon }) => {
     <div className='w-full h-96'>
       <GoogleMapReact
         bootstrapURLKeys={{
-          key: 'AIzaSyBhPP4XN4crB5xjXItQaiIZrTkUk1p9ZeM',
+          key: key,
         }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
