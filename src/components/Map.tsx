@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { MapOptions } from 'google-map-react';
 
-const key = process.env.GOOGLE_API_KEY
+const key = process.env.MAPS_API_KEY
 
 const defaultProps = {
   center: {
