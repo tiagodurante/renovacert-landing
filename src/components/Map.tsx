@@ -1,6 +1,11 @@
 import React, { FC } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl';
-import 'mapbox-gl/dist/mapbox-gl.css'; 
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 const defaultProps = {
   longitude: -53.88967,
@@ -24,8 +29,6 @@ interface MapProps {
 const Price: FC<MapProps> = ({ icon }) => {
   return (
     <div className='w-full h-96'>
-      {/* @ts-ignore */}
-      {/* eslint-disable-next-line import/no-webpack-loader-syntax */}
       <Map
         scrollZoom={false}
         initialViewState={defaultProps}
