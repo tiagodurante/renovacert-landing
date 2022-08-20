@@ -1,66 +1,46 @@
 import React, { FC } from 'react';
-import GoogleMapReact from 'google-map-react';
-import { MapOptions } from 'google-map-react';
+import Map, { Marker, Popup } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css'; 
 
 const defaultProps = {
-  center: {
-    lat: -23.874982,
-    lng: -53.88967,
-  },
-  zoom: 18,
-};
+  longitude: -53.88967,
+  latitude: -23.874982,
+  zoom: 15
+}
 
-const contentString = `
-  <div id="content">
-  <h1 class="text-xl font-medium">INT Organizações Contábeis</h1>
-  <p class="text-sm mt-2">Rua 12 de Dezembro, 242, Centro</p>
-  <p class="text-sm">Altônia/PR</p>
-  </div>
-`;
+const key = process.env.MAPS_API_KEY
 
-const renderMarkers = (map: MapOptions, maps, icon) => {
-  const infowindow = new maps.InfoWindow({
-    content: contentString,
-  });
-
-  const marker = new maps.Marker({
-    position: defaultProps.center,
-    map,
-    icon: {
-      scaledSize: new maps.Size(33, 50),
-      url: icon.src,
-    },
-    label: {
-      className: 'pb-32',
-      text: 'INT Organizações Contábeis',
-      color: '#12a3ff',
-      fontWeight: 'bold',
-    },
-  });
-
-  infowindow.open({
-    anchor: marker,
-    map,
-    shouldFocus: false,
-  });
-};
+// const contentString = `
+//   <div id="content">
+//   <h1 class="text-xl font-medium">INT Organizações Contábeis</h1>
+//   <p class="text-sm mt-2">Rua 12 de Dezembro, 242, Centro</p>
+//   <p class="text-sm">Altônia/PR</p>
+//   </div>
+// `;
 
 interface MapProps {
   children?: any;
-  icon: string;
+  icon: any;
 }
 
 const Price: FC<MapProps> = ({ icon }) => {
   return (
     <div className='w-full h-96'>
-      <GoogleMapReact
-        bootstrapURLKeys={{
-          key: process.env.MAPS_API_KEY,
-        }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-        onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps, icon)}
-      ></GoogleMapReact>
+      <Map
+        scrollZoom={false}
+        initialViewState={defaultProps}
+        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapboxAccessToken={key}
+      >
+        <Marker longitude={defaultProps.longitude} latitude={defaultProps.latitude}></Marker>
+          <Popup longitude={defaultProps.longitude} latitude={defaultProps.latitude}
+            offset={[0, -40]}
+            closeButton={false}
+            closeOnClick={false}
+            anchor="bottom">
+            INT Organizações Contábeis
+          </Popup>
+      </Map>
     </div>
   );
 };

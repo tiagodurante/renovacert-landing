@@ -209,8 +209,7 @@ const IndexPage = ({ data }) => {
             Atendimento presencial
           </h3>
           <p className='mt-4'>
-            Nosso ponto de atendimento está localizado no escritório de contabilidade INT em
-            Altônia/PR
+            Estamos localizados no escritório INT Organizações Contábeis, em Altônia/PR
           </p>
         </div>
       </AppSection>
