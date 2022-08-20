@@ -7,7 +7,7 @@ dotenv.config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `new`,
+    title: `Renova - Certificação Digital`,
     siteUrl: `https://www.renovacert.com.br`,
   },
   plugins: [

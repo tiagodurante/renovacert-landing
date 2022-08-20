@@ -6,6 +6,7 @@ import AppSection from '../components/Section';
 import AppPrice from '../components/Price';
 import AppColumn from '../components/Column';
 import Map from '../components/Map';
+import { SEO } from '../components/SEO';
 import '../styles/global.css';
 
 export const query = graphql`
@@ -23,7 +24,9 @@ export const query = graphql`
   }
 `;
 
+// @ts-ignore
 function filterImage(data, name: string) {
+  // @ts-ignore
   return data.allFile.nodes.find((item) => item.name === name).childImageSharp
     .fluid;
 }
@@ -32,6 +35,19 @@ function goToWhatsapp () {
   window.open('https://wa.me/5544999188711?&text=Ol%C3%A1%2C%20estou%20interessado%20em%20adquirir%20um%20certificado%20digital!')
 }
 
+function goToInstagram () {
+  window.open('https://www.instagram.com/renovacert/')
+}
+
+function goToMaps () {
+  window.open('https://goo.gl/maps/73vjecP3Wtc2rYPEA')
+}
+
+export const Head = () => (
+  <SEO />
+)
+
+// @ts-ignore
 const IndexPage = ({ data }) => {
   return (
     <main className=''>
@@ -211,6 +227,9 @@ const IndexPage = ({ data }) => {
           <p className='mt-4'>
             Estamos localizados no escritório INT Organizações Contábeis, em Altônia/PR
           </p>
+          <button className='bg-background mt-12 text-text py-4 px-8 font-bold rounded-full' onClick={() => goToMaps()}>
+            Abrir no Maps
+          </button>
         </div>
       </AppSection>
       <Map icon={filterImage(data, 'marker')} />
@@ -231,21 +250,21 @@ const IndexPage = ({ data }) => {
             <div className='mb-1 flex flex-row items-center'>
               <Image
                 fluid={filterImage(data, 'mail')}
-                className='w-6'
+                className='w-5'
               />
               <span className="ml-2">renovacert@gmail.com</span>
             </div>
             <div className='mb-1 flex flex-row items-center'>
               <Image
                 fluid={filterImage(data, 'whatsapp')}
-                className='w-6'
+                className='w-5'
               />
               <span className="ml-2">(44) 99918-8711</span>
             </div>
             <div className='mb-1 flex flex-row items-center'>
               <Image
                 fluid={filterImage(data, 'address')}
-                className='w-6'
+                className='w-5'
               />
               <span className="ml-2">Rua 12 de Dezembro, 242, Centro, CEP 87550-000 -
               Altônia/PR</span>
