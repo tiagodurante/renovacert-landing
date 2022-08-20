@@ -28,7 +28,7 @@ const Price: FC<MapProps> = ({ icon }) => {
         scrollZoom={false}
         initialViewState={defaultProps}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        mapboxAccessToken={process.env.MAPS_API_KEY}
+        mapboxAccessToken={process.env.GATSBY_MAPS_KEY}
       >
         <Marker longitude={defaultProps.longitude} latitude={defaultProps.latitude}></Marker>
           <Popup longitude={defaultProps.longitude} latitude={defaultProps.latitude}
