@@ -22,7 +22,6 @@ const Header: FC<HeaderProps> = (props) => {
     }
   `)
 
-  console.log(bgBucket)
 
   function getRandomBackground () {
     return bgBucket.allFile.nodes[Math.floor(Math.random() * bgBucket.allFile.nodes.length)].childImageSharp.fluid.src

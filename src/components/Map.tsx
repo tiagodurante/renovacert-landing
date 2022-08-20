@@ -8,8 +8,6 @@ const defaultProps = {
   zoom: 15
 }
 
-const key = process.env.MAPS_API_KEY
-
 // const contentString = `
 //   <div id="content">
 //   <h1 class="text-xl font-medium">INT Organizações Contábeis</h1>
@@ -30,7 +28,7 @@ const Price: FC<MapProps> = ({ icon }) => {
         scrollZoom={false}
         initialViewState={defaultProps}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-        mapboxAccessToken={key}
+        mapboxAccessToken={process.env.MAPS_API_KEY}
       >
         <Marker longitude={defaultProps.longitude} latitude={defaultProps.latitude}></Marker>
           <Popup longitude={defaultProps.longitude} latitude={defaultProps.latitude}
