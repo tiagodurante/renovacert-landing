@@ -24,6 +24,8 @@ interface MapProps {
 const Price: FC<MapProps> = ({ icon }) => {
   return (
     <div className='w-full h-96'>
+      {/* @ts-ignore */}
+      {/* eslint-disable-next-line import/no-webpack-loader-syntax */}
       <Map
         scrollZoom={false}
         initialViewState={defaultProps}
